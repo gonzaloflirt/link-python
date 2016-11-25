@@ -1,3 +1,6 @@
 [submodule "modules/link"]
 	path = modules/link
 	url = https://github.com/Ableton/link.git
+[submodule "modules/pybind11"]
+	path = modules/pybind11
+	url = https://github.com/pybind/pybind11.git
