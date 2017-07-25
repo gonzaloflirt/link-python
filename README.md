@@ -5,7 +5,7 @@ This depends on [Link](https://github.com/ableton/link.git) and [pybind11](https
 
 ## Get:
 ```
-git clone --recursive git@github.com:gonzaloflirt/link-python.git
+git clone --recursive https://github.com/gonzaloflirt/link-python.git
 ```
 ## Build:
 ```
