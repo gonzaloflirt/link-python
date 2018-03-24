@@ -27,7 +27,10 @@ PYBIND11_PLUGIN(link) {
       return sessionState.timeAtBeat(beat, quantum).count(); })
     .def("requestBeatAtTime", []
       (SessionState& sessionState, double beat, uint64_t time, double quantum){
-        sessionState.requestBeatAtTime(beat, micros(time), quantum); });
+        sessionState.requestBeatAtTime(beat, micros(time), quantum); })
+    .def("isPlaying", &SessionState::isPlaying)
+    .def("setIsPlaying", [](SessionState& sessionState, const bool isPlaying, const uint64_t time) {
+        sessionState.setIsPlaying(isPlaying, micros(time)); });
 
   class_<Link>(m, "Link")
     .def(init<const double &>())
@@ -35,7 +38,9 @@ PYBIND11_PLUGIN(link) {
     .def("numPeers", &Link::numPeers)
     .def("clock", &Link::clock)
     .def("captureSessionState", &Link::captureAppSessionState)
-    .def("commitSessionState", &Link::commitAppSessionState);
+    .def("commitSessionState", &Link::commitAppSessionState)
+    .def_property("startStopSyncEnabled",
+        &Link::isStartStopSyncEnabled, &Link::enableStartStopSync);
 
   return m.ptr();
 }
