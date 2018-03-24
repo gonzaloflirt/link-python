@@ -13,11 +13,11 @@ l = link.Link(120)
 l.enabled = True
 
 while True:
-  t = l.captureTimeline()
+  s = l.captureSessionState()
   link_time = l.clock().micros();
-  tempo_str = "{0:.2f}".format(t.tempo())
-  beats_str = "{0:.2f}".format(t.beatAtTime(link_time, 0))
-  phase = t.phaseAtTime(link_time, 4)
+  tempo_str = "{0:.2f}".format(s.tempo())
+  beats_str = "{0:.2f}".format(s.beatAtTime(link_time, 0))
+  phase = s.phaseAtTime(link_time, 4)
   phase_str = ''
   for x in range(0, 4):
     if x < phase:
