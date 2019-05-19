@@ -1,5 +1,6 @@
 #include <ableton/Link.hpp>
 #include <pybind11/pybind11.h>
+#include <pybind11/functional.h>
 
 PYBIND11_PLUGIN(link) {
   using namespace ableton;
@@ -40,7 +41,16 @@ PYBIND11_PLUGIN(link) {
     .def("captureSessionState", &Link::captureAppSessionState)
     .def("commitSessionState", &Link::commitAppSessionState)
     .def_property("startStopSyncEnabled",
-        &Link::isStartStopSyncEnabled, &Link::enableStartStopSync);
+        &Link::isStartStopSyncEnabled, &Link::enableStartStopSync)
+    .def("setNumPeersCallback", [](Link& link, const std::function<void(std::size_t)> &callback) {
+        link.setNumPeersCallback(callback);
+    })
+    .def("setTempoCallback", [](Link& link, const std::function<void(double)> &callback) {
+        link.setTempoCallback(callback);
+    })
+    .def("setStartStopCallback", [](Link& link, const std::function<void(bool)> &callback) {
+        link.setStartStopCallback(callback);
+    });
 
   return m.ptr();
 }
