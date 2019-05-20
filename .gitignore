@@ -1,9 +1,8 @@
 # IDE generated files and build outputs
-/build/
 /ide/
 /output/
 /logs/
-/lib/
+/out/
 .idea/*
 
 # System temporary files

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-import os
+from os import path
 import sys
 import time
 
-lib_dir = os.path.normpath(os.path.dirname(os.path.realpath(__file__)) + '/../lib/')
+lib_dir = path.normpath(path.dirname(path.realpath(__file__)) + '/../out/lib')
 sys.path.insert(0, lib_dir)
+sys.path.insert(0, path.join(lib_dir, 'Debug'))
 
 import link
 
