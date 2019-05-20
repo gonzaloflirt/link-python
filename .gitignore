@@ -2,7 +2,7 @@
 /ide/
 /output/
 /logs/
-/out/
+/build/
 .idea/*
 
 # System temporary files
@@ -20,6 +20,7 @@
 *.so
 *.dylib
 *.dll
+*.pyd
 
 # Compiled Static libraries
 *.lai

@@ -9,10 +9,9 @@ git clone --recursive https://github.com/hwestphal/link-python.git
 ```
 
 ## Build
-Make sure python 3 and [cmake](https://cmake.org/download/) is installed on your system.
+Make sure [CMake](https://cmake.org/download/) is installed on your system.
 ```
-cmake -S . -B out
-cmake --build out
+./setup.py build_ext --inplace
 ```
 
 ## Run example
