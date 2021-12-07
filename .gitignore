@@ -4,6 +4,7 @@
 /logs/
 /build/
 .idea/*
+*.egg-info/
 
 # System temporary files
 .DS_Store
