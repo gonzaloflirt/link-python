@@ -64,7 +64,11 @@ class CMakeBuild(build_ext):
 
 setup(
     name='LinkPython',
+    version='0.1.0',
     description='Python wrapper for Ableton Link',
+    url='https://github.com/gonzaloflirt/link-python',
+    maintainer='Gonzalo Flirt, Damián Silvani',
+    maintainer_email='munshkr@gmail.com',
     ext_modules=[CMakeExtension('LinkPython')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
