@@ -3,6 +3,7 @@
 /output/
 /logs/
 /build/
+/dist/
 .idea/*
 *.egg-info/
 
