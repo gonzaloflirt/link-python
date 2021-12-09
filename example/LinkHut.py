@@ -16,7 +16,7 @@ l.startStopSyncEnabled = True
 try:
   while True:
     s = l.captureSessionState()
-    link_time = l.clock().micros();
+    link_time = l.clock().micros()
     tempo_str = '{0:.2f}'.format(s.tempo())
     beats_str = '{0:.2f}'.format(s.beatAtTime(link_time, 0))
     playing_str = str(s.isPlaying())
