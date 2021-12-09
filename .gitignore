@@ -3,6 +3,7 @@
 /ide/
 /output/
 /logs/
+/lib/
 .idea/*
 
 # System temporary files
