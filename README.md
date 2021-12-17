@@ -1,5 +1,7 @@
 # Python wrapper for [Ableton Link](https://github.com/ableton/link.git)
 
+***For a [version published on PyPI](https://pypi.org/project/LinkPython) refer to [the munshkr fork](https://github.com/munshkr/link-python).***
+
 ## License:
 This depends on [Link](https://github.com/ableton/link.git) and [pybind11](https://github.com/pybind/pybind11). Please mind the licenses of those libraries and their dependencies.
 
