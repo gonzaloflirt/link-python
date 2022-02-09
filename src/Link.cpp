@@ -1,4 +1,5 @@
 #include <ableton/Link.hpp>
+#include <pybind11/functional.h>
 #include <pybind11/pybind11.h>
 
 PYBIND11_MODULE(link, m)
